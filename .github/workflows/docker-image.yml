@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ab-test:::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      run: docker build . --file Dockerfile --tag ab-test:${GITHUB_REF#refs/*/}

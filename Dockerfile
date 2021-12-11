@@ -3,6 +3,7 @@ FROM alpine:latest
 RUN apk add apache2-utils
 RUN apk add nano
 RUN apk add make
+RUN apk add curl
 
 RUN adduser -D admin
 
